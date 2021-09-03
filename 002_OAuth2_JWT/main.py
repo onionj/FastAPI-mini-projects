@@ -1,3 +1,7 @@
+'''
+OAuth2 with Password (and hashing), Bearer with JWT tokens 
+'''
+
 from datetime import datetime, timedelta
 from typing import Optional
 
