@@ -2,6 +2,7 @@ from typing import List
 
 import databases
 import sqlalchemy
+import datetime
 
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
@@ -20,6 +21,7 @@ notes = sqlalchemy.Table(
     metadata,
     sqlalchemy.Column("id", sqlalchemy.Integer, primary_key=True),
     sqlalchemy.Column("text", sqlalchemy.String),
+    sqlalchemy.Column("created_at", sqlalchemy.DateTime),
     sqlalchemy.Column("completed", sqlalchemy.Boolean),
 )
 
@@ -36,6 +38,7 @@ class NoteIn(BaseModel):
 
 class Note(NoteIn):
     id: int
+    created_at: datetime.datetime
 
 
 app = FastAPI(title="note app + async sql")
