@@ -51,14 +51,14 @@ async def shutdown():
     await database.disconnect()
 
 
-@app.get("/notes/", response_model=List[Note])
+@app.get("/notes/", response_model=List[Note], tags=['get notes'])
 async def read_notes():
     """return all notes"""
     query = notes.select()
     return await database.fetch_all(query)
 
 
-@app.post("/notes/", response_model=Note)
+@app.post("/notes/", response_model=Note, tags=['create note'])
 async def create_note(note: NoteIn):
     """add a note"""
     query = notes.insert().values(text=note.text, completed=note.completed)
