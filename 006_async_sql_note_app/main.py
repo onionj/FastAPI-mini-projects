@@ -4,7 +4,7 @@ import databases
 import sqlalchemy
 
 from fastapi import FastAPI
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 # SQLAlchemy specific code, as with any other app
 DATABASE_URL = "sqlite:///./test.db"
@@ -30,8 +30,8 @@ metadata.create_all(engine)
 
 
 class NoteIn(BaseModel):
-    text: str
-    completed: bool
+    text: str = Field(..., example="it some text ")
+    completed: bool = Field(..., example=True)
 
 
 class Note(NoteIn):
