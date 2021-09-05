@@ -1,7 +1,10 @@
 
-# onion!
+### onion! ###
+# site for deploy project deta.sh
 .deta
-*.db
+# sqlite file 
+*.db 
+# secret data:
 key
 env
 .env
