@@ -3,7 +3,7 @@ autopep8==1.5.7
 bcrypt==3.2.0
 cffi==1.14.6
 click==8.0.1
-cryptography==39.0.1
+cryptography==41.0.0
 dnspython==2.1.0
 ecdsa==0.17.0
 email-validator==1.1.3
