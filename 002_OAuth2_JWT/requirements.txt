@@ -14,7 +14,7 @@ passlib==1.7.4
 pyasn1==0.4.8
 pycodestyle==2.7.0
 pycparser==2.20
-pydantic==1.8.2
+pydantic==1.10.13
 python-jose==3.3.0
 python-multipart==0.0.5
 rsa==4.7.2
