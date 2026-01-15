@@ -15,7 +15,7 @@ pyasn1==0.4.8
 pycodestyle==2.7.0
 pycparser==2.20
 pydantic==1.8.2
-python-jose==3.3.0
+python-jose==3.4.0
 python-multipart==0.0.5
 rsa==4.7.2
 six==1.16.0
